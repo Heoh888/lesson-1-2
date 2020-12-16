@@ -29,9 +29,9 @@ func DivWitRemThree(){
     let arr = [2,35,3,4,5,6,23,546,775] // let's set the numbers
     var DivByThree:[Int] = [] // Here we enter the numbers that are divisible by 3
     for n in 0..<arr.count{
-        var x = arr[n]
-        x = x % 3
-        if(x == 0){
+        var valueArr = arr[n]
+        valueArr = valueArr % 3
+        if(valueArr == 0){
             DivByThree.append(arr[n])
         }
     }
