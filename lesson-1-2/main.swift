@@ -1,6 +1,4 @@
 import Foundation
-import Darwin.C.math
-
 // function that determines whether the number is even or not
 func evenNumbers(){
     let arr = [2,35,3,4,5,6,23,546,775] // let's set the numbers
