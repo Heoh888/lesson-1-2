@@ -1,4 +1,3 @@
-
 import Foundation
 import Darwin.C.math
 
@@ -63,9 +62,30 @@ func incrArrHundred(){
     print("An increasing array of 100 numbers - \(divByThree)")
 }
 
+/*
+ Attention: In task # 6, had to write a function that would add 100
+ elements of the Fibonacci number sequence to the array. I may have
+ misunderstood something, but it is not possible to do this due to
+ the limitations of the “swift” language, it cannot summa
+ 4660046610375530309 with 7540113804746346429. The maximum that is
+ possible is 93 elements. I did on 20 elements.
+*/
 
+// А function that adds a new fibonacci number to the array
+func fiboNumbers(){
+    var arr = [0,1]
+    var firstNum :Int64 = 0
+    var secondNum :Int64 = 1
+    for _ in 0...20{
+        let summ :Int64 = Int64(firstNum + secondNum)
+        firstNum = secondNum
+        secondNum = Int64(Int(summ))
+        arr.append(Int(summ))
+    }
+    print("The fibonacci number sequence - \(arr)")
+}
 // the function fills an array of 100 elements with different primes
-func hundPrimeNum(){
+func PrimeNum(){
     var arr : [Double] = []
     var priNum : Double = 2
     repeat {
@@ -84,13 +104,15 @@ func hundPrimeNum(){
             priNum += 1
         }
     } while (arr.count < 100)
-    print("One hundred prime numbers \(arr)")
+    print("One hundred prime numbers - \(arr)")
 }
 
 // declaring functions
 evenNumbers()
 DivWitRemThree()
 incrArrHundred()
-hundPrimeNum()
+fiboNumbers()
+PrimeNum()
+
 
 
