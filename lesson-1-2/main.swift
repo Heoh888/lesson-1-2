@@ -67,21 +67,21 @@ func incrArrHundred(){
 // the function fills an array of 100 elements with different primes
 func hundPrimeNum(){
     var arr : [Double] = []
-    var p : Double = 2
+    var priNum : Double = 2
     repeat {
-        var el = 0
-        for n in 1...Int(p){
-            let x : Double = p/Double(n)
-            let isInteger = floor(x) == x // true
+        var twoNum = 0
+        for n in 1...Int(priNum){
+            let x : Double = priNum/Double(n)
+            let isInteger = floor(x) == x // Let's determine whether the number "x" is an integer
             if(isInteger == true){
-                el += 1
+                twoNum += 1
             }
         }
-        if(el == 2){
-            arr.append(p)
-            p = p + 1
+        if(twoNum == 2){
+            arr.append(priNum)
+            priNum += 1
         }else{
-            p = p + 1
+            priNum += 1
         }
     } while (arr.count < 100)
     print("One hundred prime numbers \(arr)")
